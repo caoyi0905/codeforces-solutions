@@ -4,11 +4,10 @@ int main()
 {
     int i,n,m;
     cin>>n>>m;
-    if(m*2<=n){
-        if(m+1>n) cout<<m<<endl;
-        else cout<<m+1<<endl;
+    if(n==1&&m==1) cout<<1;
+    else if(m*2<=n){
+        cout<<m+1;
     }else{
-        if(m-1<1) cout<<m<<endl;
-        else cout<<m-1<<endl;
+        cout<<m-1;
     }
 }
