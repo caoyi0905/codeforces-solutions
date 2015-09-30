@@ -1,16 +1,21 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
+#include<bits/stdc++.h>
 #define ll long long
 using namespace std;
 int a[19];
 long long dp[262150][19],n,m,k;
 int tt[20][20];
+template<typename __ll>
+inline void read(__ll &m){
+    __ll x=0,f=1;char ch=getchar();
+    while(!(ch>='0'&&ch<='9')){if(ch=='-')f=-1;ch=getchar();}
+    while(ch>='0'&&ch<='9'){x=x*10+ch-'0';ch=getchar();}
+    m=x*f;
+}
 int main()
 {
     int i;
     cin>>n>>m>>k;
-    for(int i=1;i<=n;i++) cin>>a[i];
+    for(int i=1;i<=n;i++) read(a[i]);
     for(i=1;i<=k;i++){
         int x,y,c;
         cin>>x>>y>>c;

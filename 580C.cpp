@@ -1,6 +1,4 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
+#include<bits/stdc++.h>
 #define ll long long
 using namespace std;
 int a[111111];
@@ -16,11 +14,18 @@ void dfs(int root,int x,int last){
     }
     if(!cnt) ans++;
 }
+template<typename __ll>
+inline void read(__ll &m){
+    __ll x=0,f=1;char ch=getchar();
+    while(!(ch>='0'&&ch<='9')){if(ch=='-')f=-1;ch=getchar();}
+    while(ch>='0'&&ch<='9'){x=x*10+ch-'0';ch=getchar();}
+    m=x*f;
+}
 int main()
 {
     int i,n;
     cin>>n>>m;
-    for(int i=1;i<=n;i++) cin>>a[i];
+    for(int i=1;i<=n;i++) read(a[i]);
     for(i=1;i<n;i++){
         int x,y;
         cin>>x>>y;
